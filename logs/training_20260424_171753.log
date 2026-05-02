@@ -1,0 +1,27 @@
+2026-04-24 17:17:56,581 - INFO - ================================================================================
+2026-04-24 17:17:56,582 - INFO - STARTING CHICAGO CRIME CLUSTERING PIPELINE
+2026-04-24 17:17:56,582 - INFO - ================================================================================
+2026-04-24 17:17:56,582 - INFO - STEP 1: Loading Chicago crime data...
+2026-04-24 17:18:04,684 - INFO - ✓ Original dataset shape: (2752438, 22)
+2026-04-24 17:18:04,684 - INFO - STEP 2: Cleaning and preprocessing data...
+2026-04-24 17:18:09,151 - INFO - ✓ After cleaning shape: (500000, 22)
+2026-04-24 17:18:15,167 - INFO - ✓ Cleaned data saved to data/processed/crime_cleaned.csv
+2026-04-24 17:18:15,167 - INFO - STEP 3: Sampling 50,000 records for processing...
+2026-04-24 17:18:15,236 - INFO - ✓ Sampled dataset shape: (50000, 22)
+2026-04-24 17:18:15,236 - INFO - STEP 4: Selecting features for clustering...
+2026-04-24 17:18:15,237 - ERROR - ❌ ERROR in training pipeline: "['day_numArrest'] not in index"
+Traceback (most recent call last):
+  File "/content/drive/MyDrive/PatrolQ/src/train.py", line 67, in <module>
+    X = select_features(df)
+        ^^^^^^^^^^^^^^^^^^^
+  File "/content/drive/MyDrive/PatrolQ/src/features.py", line 2, in select_features
+    return df[[
+           ^^^^
+  File "/usr/local/lib/python3.12/dist-packages/pandas/core/frame.py", line 4119, in __getitem__
+    indexer = self.columns._get_indexer_strict(key, "columns")[1]
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/pandas/core/indexes/base.py", line 6212, in _get_indexer_strict
+    self._raise_if_missing(keyarr, indexer, axis_name)
+  File "/usr/local/lib/python3.12/dist-packages/pandas/core/indexes/base.py", line 6264, in _raise_if_missing
+    raise KeyError(f"{not_found} not in index")
+KeyError: "['day_numArrest'] not in index"

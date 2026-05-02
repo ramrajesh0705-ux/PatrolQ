@@ -1,0 +1,75 @@
+{
+    "dataset_info": {
+        "original_shape": "(50000, 22)",
+        "features": [
+            "Latitude",
+            "Longitude",
+            "hour",
+            "month",
+            "day_num",
+            "Arrest",
+            "Domestic"
+        ]
+    },
+    "kmeans_results": [
+        {
+            "k": 3,
+            "silhouette_score": 0.1811456215701891,
+            "davies_bouldin_score": 1.8787611089053395
+        },
+        {
+            "k": 4,
+            "silhouette_score": 0.18465868041605552,
+            "davies_bouldin_score": 1.680193913411323
+        },
+        {
+            "k": 5,
+            "silhouette_score": 0.1615626910866061,
+            "davies_bouldin_score": 1.6873315103977724
+        },
+        {
+            "k": 6,
+            "silhouette_score": 0.17447306541582008,
+            "davies_bouldin_score": 1.7675880368807624
+        },
+        {
+            "k": 7,
+            "silhouette_score": 0.16865292460271103,
+            "davies_bouldin_score": 1.6596599415583386
+        },
+        {
+            "k": 8,
+            "silhouette_score": 0.16300117755249258,
+            "davies_bouldin_score": 1.6538268291227525
+        },
+        {
+            "k": 9,
+            "silhouette_score": 0.16734597089953787,
+            "davies_bouldin_score": 1.7370081160194186
+        },
+        {
+            "k": 10,
+            "silhouette_score": 0.1649725605684109,
+            "davies_bouldin_score": 1.6739224281639018
+        }
+    ],
+    "best_kmeans": {
+        "k": 4,
+        "silhouette_score": 0.18465868041605552
+    },
+    "dbscan_results": {
+        "silhouette_score": -1.0
+    },
+    "hierarchical_results": {
+        "silhouette_score": 0.1455503182179074
+    },
+    "feature_importance": {
+        "Arrest": 0.3517337147248146,
+        "Domestic": 0.3219864345160611,
+        "Longitude": 0.29076667832906955,
+        "day_num": 0.26131715961071605,
+        "Latitude": 0.2597082715752645,
+        "month": 0.24343685376129454,
+        "hour": 0.23917803209925517
+    }
+}
